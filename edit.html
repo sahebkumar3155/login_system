@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit User</title>
+</head>
+<body>
+    <h2>Edit User</h2>
+    <form action="{{ url_for('edit', id=user['_id']) }}" method="post">
+        <input type="text" name="username" value="{{ user['username'] }}" required><br>
+        <input type="password" name="password" placeholder="New Password" required><br>
+        <input type="submit" value="Update">
+    </form>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>
